@@ -2,6 +2,9 @@
 
 ## Table of Contents
 
+## Seeding Data
+To seed the database with initial data, run the custom Django management command:
+
 This code is supposed to run inside the container
 ### 3. Connect to Running container
 ```sh
