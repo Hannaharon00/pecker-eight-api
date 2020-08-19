@@ -15,3 +15,5 @@ And run
 python manage.py seed_data
 ```
 
+## CRUD Operations
+
