@@ -2,6 +2,16 @@
 
 ## Table of Contents
 
+- [Installation & Usage](#installation)
+- [Seeding Data](#seeding-data)
+- [Feature Documentation](#feature-documentation)
+   - [Specifications CRUD](#specifications-crud)
+   - [Groups CRUD](#groups-crud)
+   - [Components CRUD](#components-crud)
+   - [Clone Specifications](#clone-specifications)
+   - [Import Specifications](#import-specifications)
+   - [Export Built Specifications Report](#export-built-specifications-report)
+
 ## Seeding Data
 To seed the database with initial data, run the custom Django management command:
 
