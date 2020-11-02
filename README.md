@@ -1,5 +1,7 @@
 # Stuffs API
 
+Stuffs API is a Django-based application designed to manage Specifications, Groups, and Components. This application allows for creating, updating, and cloning specifications
+
 ## Table of Contents
 
 - [Installation & Usage](#installation)
