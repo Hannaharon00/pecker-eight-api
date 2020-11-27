@@ -14,6 +14,13 @@ Stuffs API is a Django-based application designed to manage Specifications, Grou
    - [Import Specifications](#import-specifications)
    - [Export Built Specifications Report](#export-built-specifications-report)
 
+OR
+```sh
+./bin/start-all
+```
+That's all you will be able to access the application at localhost:8000
+
+
 ## Seeding Data
 To seed the database with initial data, run the custom Django management command:
 
