@@ -4,3 +4,7 @@
 set -o errexit
 # fail exit if one of your pipe command fails
 set -o pipefail
+postgres_ready() {
+    python <<END
+import sys
+
