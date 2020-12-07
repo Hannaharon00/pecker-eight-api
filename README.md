@@ -36,6 +36,8 @@ python manage.py seed_data
 
 ## CRUD Operations
 
+#### Specifications CRUD
+
 #### Components CRUD
 | Method | Endpoint                                    | Description                                    |
 |--------|---------------------------------------------|------------------------------------------------|
