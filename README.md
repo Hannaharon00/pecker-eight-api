@@ -52,3 +52,5 @@ python manage.py seed_data
 | PUT    | /api/stuffs/components/{id}/                | Update a specific Component                    |
 | DELETE | /api/stuffs/components/{id}/                | Delete a specific Component                    |
 
+### Implementation
+
