@@ -14,6 +14,8 @@ Stuffs API is a Django-based application designed to manage Specifications, Grou
    - [Import Specifications](#import-specifications)
    - [Export Built Specifications Report](#export-built-specifications-report)
 
+## Installation
+
 ### 2. **Use Docker to run the project**
 ```sh
    docker-compose up -d
