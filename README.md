@@ -58,6 +58,8 @@ python manage.py seed_data
 
 ## Clone Specifications
 
+### API Endpoint
+
 | Method | Endpoint                                  | Description                        |
 |--------|-------------------------------------------|------------------------------------|
 | POST   | /api/stuffs/specifications/{id}/clone/    | Clone a specific specification     |
