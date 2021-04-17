@@ -56,6 +56,13 @@ python manage.py seed_data
 
 ### Implementation
 
+- **Views**:
+  - `SpecificationViewSet`: Uses Django Rest Framework's ModelViewSet to handle CRUD operations for specifications.
+  - `NestedSpecificationGroupViewSet`: Uses Custom Viewset to provide List and Create operations for *groups in a specification.
+  - `NestedSpecificationComponentsViewSet`: Uses Custom Viewset to provide List and Create operations for *Components* in a specification.
+  - `GroupViewSet`: Uses Django Rest Framework's ModelViewSet to handle CRUD operations for groups.
+  - `ComponentViewSet`: Uses Django Rest Framework's ModelViewSet to handle CRUD operations for components.
+
 ## Clone Specifications
 
 ### API Endpoint
