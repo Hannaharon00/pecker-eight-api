@@ -45,6 +45,15 @@ python manage.py seed_data
 
 #### Specifications CRUD
 
+#### Groups CRUD
+| Method | Endpoint                               | Description                            |
+|--------|----------------------------------------|----------------------------------------|
+| GET   | /api/stuffs/specifications/{id}/groups  | List all groups in specification       |
+| POST   | /api/stuffs/specifications/{id}/groups | Create a new group in a specification  |
+| GET    | /api/stuffs/groups/{id}/               | Retrieve a specific group              |
+| PUT    | /api/stuffs/groups/{id}/               | Update a specific group                |
+| DELETE | /api/stuffs/groups/{id}/               | Delete a specific group                |
+
 #### Components CRUD
 | Method | Endpoint                                    | Description                                    |
 |--------|---------------------------------------------|------------------------------------------------|
