@@ -52,6 +52,16 @@ python manage.py seed_data
 
 #### Specifications CRUD
 
+| Method | Endpoint                         | Description                        |
+|--------|----------------------------------|------------------------------------|
+| GET    | /api/stuffs/                     | API Root                           |
+| GET    | /api/stuffs/specifications/      | List all specifications            |
+| POST   | /api/stuffs/specifications/      | Create a new specification         |
+| GET    | /api/stuffs/specifications/{id}/ | Retrieve a specific specification  |
+| PUT    | /api/stuffs/specifications/{id}/ | Update a specific specification    |
+| DELETE | /api/stuffs/specifications/{id}/ | Delete a specific specification    |
+
+
 #### Groups CRUD
 | Method | Endpoint                               | Description                            |
 |--------|----------------------------------------|----------------------------------------|
