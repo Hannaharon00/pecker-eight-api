@@ -97,3 +97,5 @@ python manage.py seed_data
 |--------|-------------------------------------------|------------------------------------|
 | POST   | /api/stuffs/specifications/{id}/clone/    | Clone a specific specification     |
 
+## Import Specifications
+
