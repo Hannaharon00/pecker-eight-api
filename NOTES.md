@@ -1,0 +1,2 @@
+- 2020-08-05 17:42:48 UTC: fix: patch minor issue
+- 2021-01-09 16:15:59 UTC: perf: improve performance
