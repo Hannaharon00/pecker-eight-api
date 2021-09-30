@@ -97,6 +97,9 @@ python manage.py seed_data
 |--------|-------------------------------------------|------------------------------------|
 | POST   | /api/stuffs/specifications/{id}/clone/    | Clone a specific specification     |
 
+- **Serializer**:
+  - `SpecificationCloneSerializer`: Handles the validation and cloning of specifications.
+
 - **View**:
   - `SpecificationViewSet.clone`: Action in the `SpecificationViewSet` that handles the cloning functionality.
 

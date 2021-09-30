@@ -1,0 +1,2 @@
+- 2021-09-14 17:39:37 UTC [jayden-claude]: Update documentation
+- 2021-09-20 00:14:24 UTC [jayden-claude]: Add basic setup
