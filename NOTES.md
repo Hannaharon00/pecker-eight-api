@@ -1,2 +1,6 @@
 - 2020-08-05 17:42:48 UTC: fix: patch minor issue
 - 2021-01-09 16:15:59 UTC: perf: improve performance
+- 2021-01-11 12:34:13 UTC: test: add unit tests
+- 2021-02-11 00:07:03 UTC: chore: update dependencies
+- 2021-02-21 06:31:08 UTC: docs: update README
+- 2021-03-15 17:58:28 UTC: fix: correct typo
