@@ -11,5 +11,8 @@
     ".git/",
     ".gitignore",
     "__pycache__/",
+    "__init__.py",
+    "dist/",
+    "node_modules/",
   ]
 }
