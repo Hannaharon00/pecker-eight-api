@@ -1,5 +1,9 @@
 - 2021-09-14 17:39:37 UTC [jayden-claude]: Update documentation
 - 2021-09-20 00:14:24 UTC [jayden-claude]: Add basic setup
+- 2021-09-24 00:43:54 UTC [jayden-claude]: Improve error handling
+- 2021-09-25 21:05:55 UTC [jayden-claude]: Update documentation
+- 2021-09-27 14:03:44 UTC [jayden-claude]: Update README
+- 2021-09-30 12:06:44 UTC [jayden-claude]: Add tests
 - 2021-12-22 02:57:03 UTC [jayden-claude]: Add feature
 - 2021-12-23 06:02:46 UTC [jayden-claude]: Minor improvements
 - 2021-12-30 12:13:12 UTC [jayden-claude]: Update dependencies
