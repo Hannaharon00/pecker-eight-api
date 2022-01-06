@@ -44,3 +44,6 @@ WSGI_APPLICATION = "config.wsgi.application"
     "django.contrib.staticfiles",
 ]
 
+    "corsheaders",
+]
+
