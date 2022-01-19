@@ -114,6 +114,8 @@ The cloning feature allows you to create a new specification based on an existin
 
 ### Overview
 
+### API Endpoint
+
 | Method | Endpoint                                   | Description                       |
 |--------|--------------------------------------------|-----------------------------------|
 | POST   | /api/stuffs/specifications/import_data/    | Import specifications, groups, and components from a JSON file |
