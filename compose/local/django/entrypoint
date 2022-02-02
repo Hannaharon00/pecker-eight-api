@@ -25,3 +25,8 @@ except psycopg2.OperationalError:
     sys.exit(-1)
 sys.exit(0)
 
+    echo >&2 'Waiting for PostgreSQL to become available...'
+    sleep 1
+done
+echo >&2 'PostgreSQL is available'
+
