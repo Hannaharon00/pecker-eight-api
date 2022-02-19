@@ -17,6 +17,7 @@ services:
   db:
     image: postgres:13
     environment:
+
 volumes:
   pg_data:
   python_packages:
