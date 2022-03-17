@@ -114,6 +114,8 @@ The cloning feature allows you to create a new specification based on an existin
 
 ### Overview
 
+The import functionality allows you to import specifications, groups, and components from a JSON file. The data is validated and saved in a single transaction to ensure data integrity.
+
 ### API Endpoint
 
 | Method | Endpoint                                   | Description                       |
