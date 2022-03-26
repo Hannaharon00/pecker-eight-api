@@ -19,6 +19,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env()
 
 # GENERAL
+# ------------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/dev/ref/settings/#debug
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -54,6 +57,13 @@ WSGI_APPLICATION = "config.wsgi.application"
     "corsheaders",
 ]
 
+LOCAL_APPS = [
+    # custom apps go here
+    "core.apps.CoreConfig",
+    "stuffs.apps.StuffsConfig",
+]
+# https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
