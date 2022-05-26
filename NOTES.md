@@ -8,3 +8,7 @@
 - 2021-02-11 00:07:03 UTC: chore: update dependencies
 - 2021-02-21 06:31:08 UTC: docs: update README
 - 2021-03-15 17:58:28 UTC: fix: correct typo
+- 2021-04-07 16:49:13 UTC: docs: add usage instructions
+- 2021-05-09 15:37:02 UTC: feat: add core functionality
+- 2021-07-18 04:29:04 UTC: docs: add usage instructions
+- 2021-10-30 02:39:38 UTC: fix: resolve minor bug
