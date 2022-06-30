@@ -96,6 +96,8 @@ python manage.py seed_data
 
 ## Clone Specifications
 
+### Overview
+
 The cloning feature allows you to create a new specification based on an existing one. Only specifications that are in the "Planning Phase" or "Planning Ready" status can be cloned.
 
 ### API Endpoint
