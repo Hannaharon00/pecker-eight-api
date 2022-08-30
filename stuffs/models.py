@@ -5,3 +5,6 @@ from model_utils.fields import StatusField
 from model_utils.models import StatusModel, TimeStampedModel
 
 
+    def __str__(self):
+        return self.name
+
