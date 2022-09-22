@@ -6,6 +6,8 @@ import django.utils.timezone
 import model_utils.fields
 
 
+    dependencies = []
+
                     ),
                 ),
                 (
