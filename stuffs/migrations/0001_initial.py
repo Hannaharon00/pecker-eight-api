@@ -12,3 +12,7 @@ import model_utils.fields
                 ),
                 (
                     "created",
+                            ("Design Ready", "Design Ready"),
+                            ("Building Phase", "Building Phase"),
+                            ("Built", "Built"),
+                        ],
