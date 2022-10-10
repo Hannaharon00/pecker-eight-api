@@ -133,3 +133,5 @@ The built specifications report generates a CSV file containing the specificatio
 
 ### Implementation
 
+```sh
+python manage.py test
