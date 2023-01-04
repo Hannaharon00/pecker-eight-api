@@ -15,6 +15,10 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "created",
+                    model_utils.fields.MonitorField(
+                        default=django.utils.timezone.now,
+                        monitor="status",
+                        verbose_name="status changed",
                             ("Design Ready", "Design Ready"),
                             ("Building Phase", "Building Phase"),
                             ("Built", "Built"),
