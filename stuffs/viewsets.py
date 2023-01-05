@@ -5,3 +5,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
+class SpecificationViewSet(ModelViewSet):
+    queryset = Specification.objects.all()
+    serializer_class = SpecificationSerializer
+
