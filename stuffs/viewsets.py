@@ -9,3 +9,8 @@ class SpecificationViewSet(ModelViewSet):
     queryset = Specification.objects.all()
     serializer_class = SpecificationSerializer
 
+    @action(detail=True, methods=["post"], serializer_class=SpecificationCloneSerializer)
+    def clone(self, request, *args, **kwargs):
+        specification = self.get_object()
+        serializer = self.get_serializer(data=request.data, specification=specification)
+
