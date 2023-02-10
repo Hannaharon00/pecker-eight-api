@@ -11,3 +11,4 @@ class SpecificationSerializer(serializers.HyperlinkedModelSerializer):
         model = Specification
         fields = "__all__"
 
+
