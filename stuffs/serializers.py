@@ -12,3 +12,8 @@ class SpecificationSerializer(serializers.HyperlinkedModelSerializer):
         fields = "__all__"
 
 
+    class Meta:
+        model = Group
+        fields = "__all__"
+        read_only_fields = ("specification",)
+
