@@ -14,3 +14,15 @@ class SpecificationViewSet(ModelViewSet):
         specification = self.get_object()
         serializer = self.get_serializer(data=request.data, specification=specification)
 
+    @action(detail=False, methods=["post"], serializer_class=SpecificationImportSerializer)
+    def import_data(self, request):
+        serializer = SpecificationImportSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                {"status": "Specifications imported successfully!"},
+                status=status.HTTP_201_CREATED,
+            )
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
