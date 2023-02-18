@@ -11,6 +11,8 @@ class SpecificationSerializer(serializers.HyperlinkedModelSerializer):
         model = Specification
         fields = "__all__"
 
+        return data
+
 
     class Meta:
         model = Group
