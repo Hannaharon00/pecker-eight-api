@@ -19,3 +19,7 @@ class SpecificationSerializer(serializers.HyperlinkedModelSerializer):
         fields = "__all__"
         read_only_fields = ("specification",)
 
+    def __init__(self, *args, **kwargs):
+        specification = kwargs.pop("specification", None)
+        super().__init__(*args, **kwargs)
+
