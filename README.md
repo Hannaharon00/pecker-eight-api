@@ -137,5 +137,7 @@ The built specifications report generates a CSV file containing the specificatio
 
 ### Implementation
 
+To run the tests, use the following command:
+
 ```sh
 python manage.py test
