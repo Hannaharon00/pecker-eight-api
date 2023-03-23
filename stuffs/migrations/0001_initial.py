@@ -22,6 +22,10 @@ class Migration(migrations.Migration):
                         default=django.utils.timezone.now,
                         monitor="status",
                         verbose_name="status changed",
+                        choices=[
+                            ("Planning Phase", "Planning Phase"),
+                            ("Planning Ready", "Planning Ready"),
+                            ("Design Phase", "Design Phase"),
                             ("Design Ready", "Design Ready"),
                             ("Building Phase", "Building Phase"),
                             ("Built", "Built"),
