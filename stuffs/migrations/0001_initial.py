@@ -30,3 +30,7 @@ class Migration(migrations.Migration):
                             ("Building Phase", "Building Phase"),
                             ("Built", "Built"),
                         ],
+                ),
+            ],
+            options={
+                "ordering": ("-created",),
