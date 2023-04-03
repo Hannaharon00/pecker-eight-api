@@ -5,6 +5,16 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
+from .models import Component, Group, Specification
+from .serializers import (
+    ComponentSerializer,
+    GroupSerializer,
+    PartCodeAssignmentSerializer,
+    SpecificationCloneSerializer,
+    SpecificationImportSerializer,
+    SpecificationSerializer,
+)
+
 class SpecificationViewSet(ModelViewSet):
     queryset = Specification.objects.all()
     serializer_class = SpecificationSerializer
