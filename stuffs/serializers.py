@@ -23,3 +23,7 @@ class SpecificationSerializer(serializers.HyperlinkedModelSerializer):
         specification = kwargs.pop("specification", None)
         super().__init__(*args, **kwargs)
 
+    def validate(self, data):
+        if self.specification and self.specification.completed:
+            raise serializers.ValidationError("Cannot create/update a component of a completed specification.")
+
