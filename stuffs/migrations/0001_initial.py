@@ -18,6 +18,10 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "created",
+                    model_utils.fields.AutoLastModifiedField(
+                        default=django.utils.timezone.now,
+                        editable=False,
+                        verbose_name="modified",
                     model_utils.fields.MonitorField(
                         default=django.utils.timezone.now,
                         monitor="status",
