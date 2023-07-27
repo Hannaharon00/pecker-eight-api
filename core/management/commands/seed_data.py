@@ -9,3 +9,9 @@ from stuffs.factories import ComponentFactory, GroupFactory, SpecificationFactor
 class Command(BaseCommand):
     help = "Seed the database with initial data"
 
+    def handle(self, *args, **kwargs):
+        self.stdout.write("Seeding data...")
+
+        specifications = SpecificationFactory.create_batch(10)
+        current_specification = specifications[-1]
+

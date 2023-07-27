@@ -18,6 +18,7 @@ from .serializers import (
     SpecificationSerializer,
 )
 
+
 class SpecificationViewSet(ModelViewSet):
     queryset = Specification.objects.all()
     serializer_class = SpecificationSerializer
