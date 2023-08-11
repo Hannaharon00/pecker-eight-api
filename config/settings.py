@@ -114,3 +114,5 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+TIME_ZONE = "UTC"
+
