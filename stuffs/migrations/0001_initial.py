@@ -22,6 +22,10 @@ class Migration(migrations.Migration):
                         default=django.utils.timezone.now,
                         editable=False,
                         verbose_name="modified",
+                    ),
+                ),
+                (
+                    "status_changed",
                     model_utils.fields.MonitorField(
                         default=django.utils.timezone.now,
                         monitor="status",
