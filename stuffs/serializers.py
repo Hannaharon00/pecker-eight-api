@@ -11,6 +11,12 @@ class SpecificationSerializer(serializers.HyperlinkedModelSerializer):
         model = Specification
         fields = "__all__"
 
+    def validate_completed(self, value):
+        if value and self.instance.components.filter(Q(part_code=None) | Q(part_code="")).exists():
+            raise serializers.ValidationError("Cannot complete a specification if any component is missing a part.")
+
+        return value
+
         return data
 
 
