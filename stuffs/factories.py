@@ -6,3 +6,4 @@ from factory.django import DjangoModelFactory
 from .models import Component, Group, Specification
 
 
+
