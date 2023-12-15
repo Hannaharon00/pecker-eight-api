@@ -33,6 +33,8 @@ class SpecificationSerializer(serializers.HyperlinkedModelSerializer):
         specification = kwargs.pop("specification", None)
         super().__init__(*args, **kwargs)
 
+        self.specification = self.instance_specification or specification
+
     @property
     def instance_specification(self):
         if hasattr(self, "instance") and isinstance(self.instance, Component):
