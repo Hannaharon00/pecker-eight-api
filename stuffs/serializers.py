@@ -23,6 +23,10 @@ class SpecificationSerializer(serializers.HyperlinkedModelSerializer):
         return data
 
 
+    def __init__(self, *args, **kwargs):
+        self.specification = kwargs.pop("specification", None)
+        super().__init__(*args, **kwargs)
+
     class Meta:
         model = Group
         fields = "__all__"
