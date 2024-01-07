@@ -41,3 +41,6 @@ class SpecificationViewSet(ModelViewSet):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     @action(detail=False, methods=["get"])
+    def get_serializer(self, *args, **kwargs):
+        kwargs.update(specification=self.get_parent_object())
+

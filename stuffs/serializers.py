@@ -49,3 +49,4 @@ class SpecificationSerializer(serializers.HyperlinkedModelSerializer):
         if self.specification and self.specification.completed:
             raise serializers.ValidationError("Cannot create/update a component of a completed specification.")
 
+
