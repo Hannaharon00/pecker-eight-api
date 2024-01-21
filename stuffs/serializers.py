@@ -33,6 +33,11 @@ class SpecificationSerializer(serializers.HyperlinkedModelSerializer):
         read_only_fields = ("specification",)
 
 
+class BaseComponentSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Component
+        fields = "__all__"
+
     def __init__(self, *args, **kwargs):
         specification = kwargs.pop("specification", None)
         super().__init__(*args, **kwargs)
