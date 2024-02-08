@@ -28,6 +28,12 @@ class SpecificationViewSet(ModelViewSet):
         specification = self.get_object()
         serializer = self.get_serializer(data=request.data, specification=specification)
 
+            return Response(
+                {"status": "Specification cloned successfully!", "cloned": specification_serializer.data},
+                status=status.HTTP_201_CREATED,
+            )
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
     @action(detail=False, methods=["post"], serializer_class=SpecificationImportSerializer)
     def import_data(self, request):
         serializer = SpecificationImportSerializer(data=request.data)
