@@ -28,6 +28,10 @@ class SpecificationViewSet(ModelViewSet):
         specification = self.get_object()
         serializer = self.get_serializer(data=request.data, specification=specification)
 
+        if serializer.is_valid():
+            cloned_specification = serializer.clone()
+            specification_serializer = SpecificationSerializer(cloned_specification, context={"request": request})
+
             return Response(
                 {"status": "Specification cloned successfully!", "cloned": specification_serializer.data},
                 status=status.HTTP_201_CREATED,
