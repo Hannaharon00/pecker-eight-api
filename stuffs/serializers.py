@@ -32,6 +32,11 @@ class SpecificationSerializer(serializers.HyperlinkedModelSerializer):
         fields = "__all__"
         read_only_fields = ("specification",)
 
+    def validate(self, data):
+        if self.specification and self.specification.completed:
+            raise serializers.ValidationError("Cannot create/update a group of a completed specification.")
+        return data
+
 
 class BaseComponentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
