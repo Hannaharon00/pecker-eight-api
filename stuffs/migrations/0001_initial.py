@@ -42,6 +42,10 @@ class Migration(migrations.Migration):
             ],
             options={
                 "ordering": ("-created",),
+            fields=[
+                (
+                    "id",
+                    models.BigAutoField(
                     ),
                 ),
                 (
