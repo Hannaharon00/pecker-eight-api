@@ -51,6 +51,8 @@ class SpecificationViewSet(ModelViewSet):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     @action(detail=False, methods=["get"])
+        df.to_csv(path_or_buf=response, index=False, header=["Specification Code", "Number of Built Specifications"])
+
     def get_serializer(self, *args, **kwargs):
         kwargs.update(specification=self.get_parent_object())
 
