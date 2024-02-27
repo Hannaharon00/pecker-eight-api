@@ -10,6 +10,12 @@ from model_utils.models import StatusModel, TimeStampedModel
     completed = models.BooleanField(default=False)
     status = StatusField(choices=STATUS)
 
+    objects = models.Manager()
+    reports = SpecificationReportManager()
+
+    class Meta:
+        ordering = ("-created",)
+
     def __str__(self):
         return self.name
 
