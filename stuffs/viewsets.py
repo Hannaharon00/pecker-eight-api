@@ -56,3 +56,5 @@ class SpecificationViewSet(ModelViewSet):
     def get_serializer(self, *args, **kwargs):
         kwargs.update(specification=self.get_parent_object())
 
+        return super().get_serializer(*args, **kwargs)
+
