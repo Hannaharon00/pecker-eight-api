@@ -63,4 +63,10 @@ class BaseComponentSerializer(serializers.HyperlinkedModelSerializer):
         if self.specification and self.specification.completed:
             raise serializers.ValidationError("Cannot create/update a component of a completed specification.")
 
+class ComponentSerializer(BaseComponentSerializer):
+    class Meta:
+        model = Component
+        fields = "__all__"
+        read_only_fields = ("specification",)
+
 
