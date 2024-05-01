@@ -70,5 +70,6 @@ class ComponentSerializer(BaseComponentSerializer):
         read_only_fields = ("specification",)
 
 
+
         return super().validate(data)
 
