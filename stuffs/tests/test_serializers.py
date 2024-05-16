@@ -14,3 +14,9 @@ from rest_framework.exceptions import ValidationError
         with self.assertRaises(ValidationError):
             serializer.is_valid(raise_exception=True)
 
+        self.component.part_code = "PART001"
+        self.component.save()
+        serializer = SpecificationSerializer(self.specification, data={"completed": True}, partial=True)
+        self.assertTrue(serializer.is_valid())
+        self.assertEqual(serializer.validated_data["completed"], True)
+
