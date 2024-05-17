@@ -73,3 +73,7 @@ class ComponentSerializer(BaseComponentSerializer):
 
         return super().validate(data)
 
+        cloned_specification.pk = None
+        cloned_specification.status = "Planning Phase" if not include_parts else "Design Phase"
+        cloned_specification.save()
+
