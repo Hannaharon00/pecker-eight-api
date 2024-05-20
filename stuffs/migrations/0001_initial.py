@@ -57,4 +57,8 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 (
+                    "created",
+                    ),
+                ),
+                (
                     "modified",
