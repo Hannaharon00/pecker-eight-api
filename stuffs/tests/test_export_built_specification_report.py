@@ -5,3 +5,6 @@ from rest_framework.test import APIClient
 from ..factories import SpecificationFactory
 
 
+        self.client = APIClient()
+        self.url = "/api/stuffs/specifications/export_built_specification_report/"
+
