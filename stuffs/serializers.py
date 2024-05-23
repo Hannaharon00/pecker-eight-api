@@ -70,6 +70,11 @@ class ComponentSerializer(BaseComponentSerializer):
         read_only_fields = ("specification",)
 
 
+class PartCodeAssignmentSerializer(BaseComponentSerializer):
+    class Meta:
+        model = Component
+        fields = ["part_code"]
+
 
         return super().validate(data)
 
