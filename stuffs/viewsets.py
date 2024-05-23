@@ -58,3 +58,6 @@ class SpecificationViewSet(ModelViewSet):
 
         return super().get_serializer(*args, **kwargs)
 
+    def perform_create(self, serializer):
+        serializer.save(specification_id=self.look_up_field_value)
+
