@@ -36,6 +36,12 @@ class SpecificationSerializer(serializers.HyperlinkedModelSerializer):
         fields = "__all__"
         read_only_fields = ("specification",)
 
+    def validate_name(self, value):
+        if Group.objects.filter(name=value).exclude(specification=self.specification).exists():
+            raise serializers.ValidationError(f"The group name '{value}' is already in use by another specification.")
+
+        return value
+
     def validate(self, data):
         if self.specification and self.specification.completed:
             raise serializers.ValidationError("Cannot create/update a group of a completed specification.")
