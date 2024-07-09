@@ -16,3 +16,4 @@ specifications_router.register(
     r"components", viewsets.NestedSpecificationComponentsViewSet, basename="specification-components"
 )
 
+urlpatterns = [path("", include(router.urls)), path("", include(specifications_router.urls))]
