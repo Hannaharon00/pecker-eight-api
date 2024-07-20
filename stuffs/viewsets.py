@@ -51,6 +51,10 @@ class SpecificationViewSet(ModelViewSet):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     @action(detail=False, methods=["get"])
+    def export_built_specification_report(self, request):
+        built_count = Specification.reports.built_count()
+        df = pd.DataFrame.from_records(built_count)
+
         df.to_csv(path_or_buf=response, index=False, header=["Specification Code", "Number of Built Specifications"])
 
     def get_serializer(self, *args, **kwargs):
