@@ -8,6 +8,9 @@ from rest_framework.exceptions import ValidationError
 )
 
 
+        self.group = GroupFactory(specification=self.specification)
+        self.component = ComponentFactory(specification=self.specification, group=self.group)
+
     def test_validate_completed(self):
         self.specification.completed = True
         serializer = SpecificationSerializer(self.specification, data={"completed": True}, partial=True)
