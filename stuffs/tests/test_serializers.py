@@ -29,3 +29,10 @@ class SpecificationSerializerTest(TestCase):
         self.assertTrue(serializer.is_valid())
         self.assertEqual(serializer.validated_data["completed"], True)
 
+        GroupFactory(name="Test Group", specification=another_specification)
+        serializer = GroupSerializer(
+            data={"name": "Test Group", "group_code": "GRP004"}, specification=self.specification
+        )
+        with self.assertRaises(ValidationError):
+            serializer.is_valid(raise_exception=True)
+
