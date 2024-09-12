@@ -11,6 +11,9 @@ from stuffs.serializers import (
 )
 
 
+class SpecificationSerializerTest(TestCase):
+    def setUp(self):
+        self.specification = SpecificationFactory()
         self.group = GroupFactory(specification=self.specification)
         self.component = ComponentFactory(specification=self.specification, group=self.group)
 
