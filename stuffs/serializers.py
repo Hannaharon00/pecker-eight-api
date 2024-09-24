@@ -85,6 +85,9 @@ class PartCodeAssignmentSerializer(BaseComponentSerializer):
         fields = ["part_code"]
 
 
+    def __init__(self, *args, **kwargs):
+        self.specification = kwargs.pop("specification", None)
+
         super().__init__(*args, **kwargs)
 
     def validate(self, data):
