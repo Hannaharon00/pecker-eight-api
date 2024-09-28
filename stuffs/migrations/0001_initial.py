@@ -54,6 +54,10 @@ class Migration(migrations.Migration):
                             ("Building Phase", "Building Phase"),
                             ("Built", "Built"),
                         ],
+                        default="Planning Phase",
+                        max_length=100,
+                        no_check_for_status=True,
+                    ),
                 ),
             ],
             options={
