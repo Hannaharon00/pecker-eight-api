@@ -46,6 +46,10 @@ class Migration(migrations.Migration):
                         default=django.utils.timezone.now,
                         monitor="status",
                         verbose_name="status changed",
+                    ),
+                ),
+                ("name", models.CharField(max_length=200)),
+                ("code_number", models.CharField(max_length=50)),
                         choices=[
                             ("Planning Phase", "Planning Phase"),
                             ("Planning Ready", "Planning Ready"),
