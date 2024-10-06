@@ -24,3 +24,9 @@ class Specification(TimeStampedModel, StatusModel):
     def __str__(self):
         return self.name
 
+
+class Group(TimeStampedModel):
+    name = models.CharField(max_length=50)
+    group_code = models.CharField(max_length=50)
+    specification = models.ForeignKey(Specification, related_name="groups", on_delete=models.CASCADE)
+
