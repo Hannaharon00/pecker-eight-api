@@ -16,3 +16,8 @@ class SpecificationFactory(DjangoModelFactory):
     status = "Planning Phase"
 
 
+    name = factory.Faker("word")
+    group_code = factory.Faker("ean8")
+    specification = factory.SubFactory(SpecificationFactory)
+
+
