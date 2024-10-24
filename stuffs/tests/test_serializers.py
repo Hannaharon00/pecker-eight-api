@@ -32,6 +32,11 @@ class SpecificationSerializerTest(TestCase):
         with self.assertRaises(ValidationError):
             serializer.is_valid(raise_exception=True)
 
+class GroupSerializerTest(TestCase):
+    def setUp(self):
+        self.specification = SpecificationFactory()
+        self.group = GroupFactory(specification=self.specification)
+
         GroupFactory(name="Test Group", specification=another_specification)
         serializer = GroupSerializer(
             data={"name": "Test Group", "group_code": "GRP004"}, specification=self.specification
