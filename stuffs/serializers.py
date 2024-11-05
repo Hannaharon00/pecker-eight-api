@@ -96,6 +96,10 @@ class PartCodeAssignmentSerializer(BaseComponentSerializer):
 
         return super().validate(data)
 
+    def clone(self):
+        cloned_specification = deepcopy(self.specification)
+        include_parts = self.validated_data.get("include_parts", False)
+
         cloned_specification.pk = None
         cloned_specification.status = "Planning Phase" if not include_parts else "Design Phase"
         cloned_specification.save()
