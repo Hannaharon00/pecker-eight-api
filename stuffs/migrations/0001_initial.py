@@ -78,3 +78,7 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "modified",
+                        related_name="groups",
+                        to="stuffs.specification",
+                    ),
+                ),
