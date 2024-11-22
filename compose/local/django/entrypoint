@@ -33,3 +33,4 @@ until postgres_ready; do
 done
 echo >&2 'PostgreSQL is available'
 
+exec "$@"
