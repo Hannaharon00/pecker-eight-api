@@ -23,6 +23,7 @@ class SpecificationSerializerTest(TestCase):
         with self.assertRaises(ValidationError):
             serializer.is_valid(raise_exception=True)
 
+    def test_validate_completed_with_parts(self):
         self.component.part_code = "PART001"
         self.component.save()
         serializer = SpecificationSerializer(self.specification, data={"completed": True}, partial=True)
