@@ -30,6 +30,10 @@ class SpecificationSerializerTest(TestCase):
         self.assertTrue(serializer.is_valid())
         self.assertEqual(serializer.validated_data["completed"], True)
 
+    def test_validate_modification_of_completed_specification(self):
+        self.specification.completed = True
+        self.specification.save()
+        serializer = SpecificationSerializer(self.specification, data={"name": "New Name"}, partial=True)
         with self.assertRaises(ValidationError):
             serializer.is_valid(raise_exception=True)
 
