@@ -78,6 +78,10 @@ class ComponentSerializer(BaseComponentSerializer):
         fields = "__all__"
         read_only_fields = ("specification",)
 
+    def validate_group(self, value):
+        if self.specification and value.specification != self.specification:
+            raise serializers.ValidationError("Group must be in the same specification as the component.")
+
 
 class PartCodeAssignmentSerializer(BaseComponentSerializer):
     class Meta:
