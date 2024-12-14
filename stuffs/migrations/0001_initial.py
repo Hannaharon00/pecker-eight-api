@@ -50,6 +50,10 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=200)),
                 ("code_number", models.CharField(max_length=50)),
+                ("completed", models.BooleanField(default=False)),
+                (
+                    "status",
+                    model_utils.fields.StatusField(
                         choices=[
                             ("Planning Phase", "Planning Phase"),
                             ("Planning Ready", "Planning Ready"),
