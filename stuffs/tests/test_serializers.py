@@ -49,3 +49,10 @@ class GroupSerializerTest(TestCase):
         with self.assertRaises(ValidationError):
             serializer.is_valid(raise_exception=True)
 
+        self.specification.save()
+        serializer = GroupSerializer(
+            data={"name": "New Group", "group_code": "GRP003"}, specification=self.specification
+        )
+        with self.assertRaises(ValidationError):
+            serializer.is_valid(raise_exception=True)
+
