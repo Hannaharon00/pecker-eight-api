@@ -85,6 +85,8 @@ class ComponentSerializer(BaseComponentSerializer):
         if self.specification and value.specification != self.specification:
             raise serializers.ValidationError("Group must be in the same specification as the component.")
 
+        return value
+
 
 class PartCodeAssignmentSerializer(BaseComponentSerializer):
     class Meta:

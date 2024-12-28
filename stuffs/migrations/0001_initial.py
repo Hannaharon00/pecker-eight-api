@@ -86,6 +86,10 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "modified",
+                    ),
+                ),
+                ("name", models.CharField(max_length=50)),
+                ("group_code", models.CharField(max_length=50)),
                         related_name="groups",
                         to="stuffs.specification",
                     ),
