@@ -114,3 +114,6 @@ class PartCodeAssignmentSerializer(BaseComponentSerializer):
         cloned_specification.save()
 
 
+class SpecificationImportExportSerializer(SpecificationSerializer):
+    groups = GroupImportSerializer(many=True, required=False)
+
