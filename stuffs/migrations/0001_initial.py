@@ -94,3 +94,7 @@ class Migration(migrations.Migration):
                         to="stuffs.specification",
                     ),
                 ),
+        ),
+        migrations.CreateModel(
+            name="Component",
+            fields=[
