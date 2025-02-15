@@ -113,6 +113,12 @@ class PartCodeAssignmentSerializer(BaseComponentSerializer):
         cloned_specification.status = "Planning Phase" if not include_parts else "Design Phase"
         cloned_specification.save()
 
+        return cloned_specification
+
+    def clone_group(self, group, specification):
+        group.pk = None
+        group.specification = specification
+
 
 class SpecificationImportExportSerializer(SpecificationSerializer):
     groups = GroupImportSerializer(many=True, required=False)
