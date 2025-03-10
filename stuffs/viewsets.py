@@ -60,6 +60,7 @@ class SpecificationViewSet(ModelViewSet):
 
         df.to_csv(path_or_buf=response, index=False, header=["Specification Code", "Number of Built Specifications"])
 
+
 class BaseNestedSpecificationViewSet(NestedObjectMixin, CreateListViewSet):
     parent_model = Specification
     parent_object_lookup_field = "specification_pk"
