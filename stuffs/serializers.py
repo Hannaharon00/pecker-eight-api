@@ -123,3 +123,4 @@ class PartCodeAssignmentSerializer(BaseComponentSerializer):
 class SpecificationImportExportSerializer(SpecificationSerializer):
     groups = GroupImportSerializer(many=True, required=False)
 
+
