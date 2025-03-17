@@ -94,6 +94,9 @@ class PartCodeAssignmentSerializer(BaseComponentSerializer):
         fields = ["part_code"]
 
 
+class SpecificationCloneSerializer(serializers.Serializer):
+    include_parts = serializers.BooleanField(default=False)
+
     def __init__(self, *args, **kwargs):
         self.specification = kwargs.pop("specification", None)
 
