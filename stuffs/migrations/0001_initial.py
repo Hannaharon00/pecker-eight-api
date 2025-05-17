@@ -94,6 +94,10 @@ class Migration(migrations.Migration):
                         to="stuffs.specification",
                     ),
                 ),
+            ],
+            options={
+                "ordering": ("-created",),
+            },
         ),
         migrations.CreateModel(
             name="Component",
