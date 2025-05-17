@@ -64,3 +64,5 @@ class GroupSerializerTest(TestCase):
 class ComponentSerializerTest(TestCase):
     def setUp(self):
         self.specification = SpecificationFactory()
+    def test_part_code_assignment(self):
+        serializer = PartCodeAssignmentSerializer(self.component, data={"part_code": "PART001"}, partial=True)

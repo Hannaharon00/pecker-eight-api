@@ -122,6 +122,9 @@ class SpecificationCloneSerializer(serializers.Serializer):
         group.pk = None
         group.specification = specification
 
+class GroupImportSerializer(GroupSerializer):
+    components = ComponentSerializer(many=True)
+
 
 class SpecificationImportExportSerializer(SpecificationSerializer):
     groups = GroupImportSerializer(many=True, required=False)
