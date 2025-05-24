@@ -106,6 +106,9 @@ class SpecificationCloneSerializer(serializers.Serializer):
         if self.specification is None:
             raise serializers.ValidationError("Specification must be specified.")
 
+        if self.specification.status not in ["Planning Phase", "Planning Ready"]:
+            raise serializers.ValidationError("Only specifications in Planning Phase or Planning Ready can be cloned.")
+
         return super().validate(data)
 
     def clone(self):
