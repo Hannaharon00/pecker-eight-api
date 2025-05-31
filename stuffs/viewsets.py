@@ -73,4 +73,7 @@ class BaseNestedSpecificationViewSet(NestedObjectMixin, CreateListViewSet):
     def perform_create(self, serializer):
         serializer.save(specification_id=self.look_up_field_value)
 
+    def get_queryset(self):
+        return Group.objects.filter(specification_id=self.look_up_field_value)
+
 
