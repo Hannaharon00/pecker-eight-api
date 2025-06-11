@@ -135,3 +135,7 @@ class SpecificationImportExportSerializer(SpecificationSerializer):
     groups = GroupImportSerializer(many=True, required=False)
 
 
+    def create_specification(self, spec_data):
+        """Create a specification instance."""
+        return Specification.objects.create(**spec_data)
+
