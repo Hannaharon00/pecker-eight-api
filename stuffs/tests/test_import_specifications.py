@@ -20,3 +20,4 @@ class ImportSpecificationsTest(TestCase):
                         {
                             "name": "Group 1",
                             "group_code": "GRP001",
+
