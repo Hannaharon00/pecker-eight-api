@@ -25,3 +25,8 @@ class GroupFactory(DjangoModelFactory):
     specification = factory.SubFactory(SpecificationFactory)
 
 
+    name = factory.Faker("word")
+    description = factory.Faker("sentence")
+    part_code = factory.Faker("ean8")
+    group = factory.SubFactory(GroupFactory)
+    specification = factory.SelfAttribute("group.specification")
