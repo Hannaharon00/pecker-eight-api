@@ -135,6 +135,14 @@ class SpecificationImportExportSerializer(SpecificationSerializer):
     groups = GroupImportSerializer(many=True, required=False)
 
 
+    def create(self, validated_data):
+        specifications_data = validated_data["specifications"]
+        created_specifications = []
+
+        for spec_data in specifications_data:
+            # Extract and pop the nested data for groups
+            groups_data = spec_data.pop("groups", [])
+
     def create_specification(self, spec_data):
         """Create a specification instance."""
         return Specification.objects.create(**spec_data)
