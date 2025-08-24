@@ -16,3 +16,9 @@ class BuiltSpecificationsReportTest(TestCase):
         self.spec3 = SpecificationFactory(code_number="SPEC002", status="Built")
         self.spec4 = SpecificationFactory(code_number="SPEC003", status="Planning Phase")
 
+        content = response.content.decode("utf-8")
+        lines = content.split("\n")
+        self.assertEqual(lines[0], "Specification Code,Number of Built Specifications")
+        self.assertIn("SPEC001,2", lines)
+        self.assertIn("SPEC002,1", lines)
+        self.assertNotIn("SPEC003", lines)
