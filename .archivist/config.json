@@ -14,5 +14,9 @@
     "__init__.py",
     "dist/",
     "node_modules/",
+    "package-lock.json",
+    "yarn.lock",
+    "*.config.js",
+    ".next/"
   ]
 }
