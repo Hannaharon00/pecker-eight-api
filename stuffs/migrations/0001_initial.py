@@ -106,6 +106,10 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="Component",
             fields=[
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
                         on_delete=django.db.models.deletion.CASCADE,
                         related_name="components",
                         to="stuffs.group",
