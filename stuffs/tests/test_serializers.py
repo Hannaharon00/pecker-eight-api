@@ -68,6 +68,12 @@ class ComponentSerializerTest(TestCase):
         self.group = GroupFactory(specification=self.specification)
         self.component = ComponentFactory(specification=self.specification, group=self.group)
 
+    def test_validate_group(self):
+        another_specification = SpecificationFactory()
+        another_group = GroupFactory(specification=another_specification)
+        serializer = ComponentSerializer(
+            data={
+                "name": "Component 1",
     def test_validate_component_creation_in_completed_specification(self):
 
     def test_part_code_assignment(self):
