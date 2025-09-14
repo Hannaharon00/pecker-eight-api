@@ -32,6 +32,7 @@ class ImportSpecificationsTest(TestCase):
             ]
         }
 
+
     def test_import_specifications_invalid_data(self):
         invalid_payload = {
             "specifications": [
