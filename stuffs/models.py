@@ -24,6 +24,9 @@ class Specification(TimeStampedModel, StatusModel):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse("Specification-detail", kwargs={"pk": self.pk})
+
 
 class Group(TimeStampedModel):
     name = models.CharField(max_length=50)
