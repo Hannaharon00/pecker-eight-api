@@ -33,3 +33,6 @@ class Group(TimeStampedModel):
     group_code = models.CharField(max_length=50)
     specification = models.ForeignKey(Specification, related_name="groups", on_delete=models.CASCADE)
 
+    class Meta:
+        ordering = ("-created",)
+
