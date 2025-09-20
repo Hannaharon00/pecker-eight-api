@@ -94,6 +94,10 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=50)),
                 ("group_code", models.CharField(max_length=50)),
+                (
+                    "specification",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
                         related_name="groups",
                         to="stuffs.specification",
                     ),
