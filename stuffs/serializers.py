@@ -150,6 +150,9 @@ class SpecificationImportExportSerializer(SpecificationSerializer):
             # Extract and pop the nested data for groups
             groups_data = spec_data.pop("groups", [])
 
+            # Create nested groups and components
+            self.create_groups(groups_data, specification)
+
     def create_specification(self, spec_data):
         """Create a specification instance."""
         return Specification.objects.create(**spec_data)
