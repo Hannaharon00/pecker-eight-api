@@ -114,6 +114,10 @@ class Migration(migrations.Migration):
                         serialize=False,
                         verbose_name="ID",
                     ),
+                ),
+                (
+                    "created",
+                    model_utils.fields.AutoCreatedField(
                         on_delete=django.db.models.deletion.CASCADE,
                         related_name="components",
                         to="stuffs.group",
