@@ -118,6 +118,10 @@ class Migration(migrations.Migration):
                 (
                     "created",
                     model_utils.fields.AutoCreatedField(
+                ),
+                (
+                    "modified",
+                    model_utils.fields.AutoLastModifiedField(
                         on_delete=django.db.models.deletion.CASCADE,
                         related_name="components",
                         to="stuffs.group",
