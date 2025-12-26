@@ -142,6 +142,9 @@ class SpecificationImportExportSerializer(SpecificationSerializer):
     groups = GroupImportSerializer(many=True, required=False)
 
 
+class SpecificationImportSerializer(serializers.Serializer):
+    specifications = SpecificationImportExportSerializer(many=True)
+
     def create(self, validated_data):
         specifications_data = validated_data["specifications"]
         created_specifications = []
