@@ -74,6 +74,14 @@ class ComponentSerializerTest(TestCase):
         serializer = ComponentSerializer(
             data={
                 "name": "Component 1",
+                "description": "A test component",
+                "part_code": "PART002",
+                "group": another_group.id,
+            }
+        )
+        with self.assertRaises(ValidationError):
+            serializer.is_valid(raise_exception=True)
+
     def test_validate_component_creation_in_completed_specification(self):
 
     def test_part_code_assignment(self):
