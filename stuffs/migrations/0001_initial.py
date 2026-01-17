@@ -122,6 +122,10 @@ class Migration(migrations.Migration):
                 (
                     "modified",
                     model_utils.fields.AutoLastModifiedField(
+                        default=django.utils.timezone.now,
+                        editable=False,
+                        verbose_name="modified",
+                    ),
                         on_delete=django.db.models.deletion.CASCADE,
                         related_name="components",
                         to="stuffs.group",
