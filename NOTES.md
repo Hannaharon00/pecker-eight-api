@@ -16,3 +16,5 @@
 - 2021-05-09 15:37:02 UTC: feat: add core functionality
 - 2021-07-18 04:29:04 UTC: docs: add usage instructions
 - 2021-10-30 02:39:38 UTC: fix: resolve minor bug
+- 2021-11-08 14:51:34 UTC: chore: tidy up project files
+- 2021-12-04 15:25:18 UTC: fix: resolve minor bug
