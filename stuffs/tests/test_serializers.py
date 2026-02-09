@@ -109,3 +109,8 @@ class SpecificationCloneSerializerTest(TestCase):
         self.group = GroupFactory(specification=self.specification)
         self.component = ComponentFactory(specification=self.specification, group=self.group)
 
+    def test_validate_clone(self):
+        data = {"include_parts": True}
+        serializer = SpecificationCloneSerializer(data=data)
+        with self.assertRaises(ValidationError):
+            serializer.is_valid(raise_exception=True)
