@@ -85,3 +85,13 @@ class NestedSpecificationGroupViewSet(BaseNestedSpecificationViewSet):
 
 
 
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                {
+                    "status": "part_assigned",
+                    "component": serializer.data,
+                },
+                status=status.HTTP_200_OK,
+            )
+
