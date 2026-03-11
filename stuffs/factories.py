@@ -25,6 +25,10 @@ class GroupFactory(DjangoModelFactory):
     specification = factory.SubFactory(SpecificationFactory)
 
 
+class ComponentFactory(DjangoModelFactory):
+    class Meta:
+        model = Component
+
     name = factory.Faker("word")
     description = factory.Faker("sentence")
     part_code = factory.Faker("ean8")
