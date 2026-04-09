@@ -43,3 +43,6 @@ class ImportSpecificationsTest(TestCase):
             "specifications": [
                 {"name": "", "code_number": "SPEC001", "completed": False, "status": "Planning Phase", "groups": []}
             ]
+        }
+        response = self.client.post(self.url, data=invalid_payload, format="json")
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
