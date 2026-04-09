@@ -26,6 +26,11 @@ class ImportSpecificationsTest(TestCase):
                             ],
                         },
                         {
+                            "name": "Group 2",
+                            "group_code": "GRP002",
+                            "components": [
+                                {"name": "Component 3", "description": "This is component 3", "part_code": "PART003"}
+                            ],
                         },
                     ],
                 }
