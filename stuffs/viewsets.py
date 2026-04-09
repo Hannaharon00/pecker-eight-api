@@ -83,6 +83,9 @@ class NestedSpecificationGroupViewSet(BaseNestedSpecificationViewSet):
         return Group.objects.filter(specification_id=self.look_up_field_value)
 
 
+class NestedSpecificationComponentsViewSet(BaseNestedSpecificationViewSet):
+    serializer_class = ComponentSerializer
+
 
 
         if serializer.is_valid():
