@@ -36,3 +36,6 @@ class Group(TimeStampedModel):
     class Meta:
         ordering = ("-created",)
 
+    class Meta:
+        ordering = ("-created",)
+
