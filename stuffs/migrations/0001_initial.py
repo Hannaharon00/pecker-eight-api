@@ -146,3 +146,7 @@ class Migration(migrations.Migration):
                         related_name="components",
                         to="stuffs.specification",
                     ),
+                ),
+            ],
+            options={
+                "ordering": ("-created",),
