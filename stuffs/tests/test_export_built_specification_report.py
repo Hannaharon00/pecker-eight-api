@@ -16,6 +16,9 @@ class BuiltSpecificationsReportTest(TestCase):
         self.spec3 = SpecificationFactory(code_number="SPEC002", status="Built")
         self.spec4 = SpecificationFactory(code_number="SPEC003", status="Planning Phase")
 
+    def test_export_built_specification_report(self):
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
         content = response.content.decode("utf-8")
         lines = content.split("\n")
         self.assertEqual(lines[0], "Specification Code,Number of Built Specifications")
