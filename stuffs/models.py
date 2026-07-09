@@ -36,6 +36,13 @@ class Group(TimeStampedModel):
     class Meta:
         ordering = ("-created",)
 
+class Component(TimeStampedModel):
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+    part_code = models.CharField(max_length=200, null=True, blank=True)
+    specification = models.ForeignKey(Specification, related_name="components", on_delete=models.CASCADE)
+    group = models.ForeignKey(Group, related_name="components", on_delete=models.CASCADE, null=True)
+
     class Meta:
         ordering = ("-created",)
 
