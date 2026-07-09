@@ -134,6 +134,10 @@ class Migration(migrations.Migration):
                         editable=False,
                         verbose_name="modified",
                     ),
+                (
+                    "group",
+                    models.ForeignKey(
+                        null=True,
                         on_delete=django.db.models.deletion.CASCADE,
                         related_name="components",
                         to="stuffs.group",
