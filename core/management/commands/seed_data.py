@@ -21,3 +21,4 @@ class Command(BaseCommand):
         User = get_user_model()
         User.objects.create_superuser(username="admin", password="admin")
 
+        self.stdout.write("Data seeded successfully.")
