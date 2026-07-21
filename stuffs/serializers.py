@@ -144,6 +144,8 @@ class SpecificationCloneSerializer(serializers.Serializer):
             component.part_code = None
         component.specification = specification
 
+        return component
+
 class GroupImportSerializer(GroupSerializer):
     components = ComponentSerializer(many=True)
 
