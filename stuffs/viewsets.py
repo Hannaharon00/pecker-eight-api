@@ -88,6 +88,11 @@ class NestedSpecificationComponentsViewSet(BaseNestedSpecificationViewSet):
 
 
 
+    @action(detail=True, methods=["patch"], serializer_class=PartCodeAssignmentSerializer)
+    def assign_part(self, request, *args, **kwargs):
+        component = self.get_object()
+        serializer = self.get_serializer(component, data=request.data, partial=True)
+
         if serializer.is_valid():
             serializer.save()
             return Response(
