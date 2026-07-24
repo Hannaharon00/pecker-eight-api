@@ -87,6 +87,10 @@ class NestedSpecificationComponentsViewSet(BaseNestedSpecificationViewSet):
     serializer_class = ComponentSerializer
 
 
+class GroupViewSet(RetrieveUpdateDestroyViewset):
+    queryset = Group.objects.all()
+    serializer_class = GroupSerializer
+
 
     @action(detail=True, methods=["patch"], serializer_class=PartCodeAssignmentSerializer)
     def assign_part(self, request, *args, **kwargs):
