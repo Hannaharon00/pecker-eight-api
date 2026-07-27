@@ -112,6 +112,7 @@ class SpecificationCloneSerializerTest(TestCase):
         self.group = GroupFactory(specification=self.specification)
         self.component = ComponentFactory(specification=self.specification, group=self.group)
 
+    def test_clone_specification(self):
         self.assertNotEqual(cloned_specification.pk, self.specification.pk)
         self.assertEqual(cloned_specification.status, "Design Phase")
         self.assertEqual(cloned_specification.groups.count(), self.specification.groups.count())
