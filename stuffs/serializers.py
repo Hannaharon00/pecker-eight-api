@@ -188,6 +188,11 @@ class SpecificationImportSerializer(serializers.Serializer):
 
             self.create_components(components_data, group, specification)
 
+    def create_group(self, group_data, specification):
+        """Create a group instance."""
+        group_serializer = GroupSerializer(data=group_data)
+        group_serializer.is_valid(raise_exception=True)
+
         return group_serializer.save(specification=specification)
 
     def create_components(self, components_data, group=None, specification=None):
