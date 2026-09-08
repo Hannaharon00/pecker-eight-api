@@ -138,6 +138,10 @@ class Migration(migrations.Migration):
                         editable=False,
                         verbose_name="modified",
                     ),
+                ),
+                ("name", models.CharField(max_length=200)),
+                ("description", models.TextField()),
+                ("part_code", models.CharField(blank=True, max_length=200, null=True)),
                 (
                     "group",
                     models.ForeignKey(
