@@ -114,6 +114,11 @@ class SpecificationCloneSerializerTest(TestCase):
         self.component = ComponentFactory(specification=self.specification, group=self.group)
 
     def test_clone_specification(self):
+        data = {"include_parts": True}
+        serializer = SpecificationCloneSerializer(data=data, specification=self.specification)
+        self.assertTrue(serializer.is_valid())
+        cloned_specification = serializer.clone()
+
         self.assertNotEqual(cloned_specification.pk, self.specification.pk)
         self.assertEqual(cloned_specification.status, "Design Phase")
         self.assertEqual(cloned_specification.groups.count(), self.specification.groups.count())
