@@ -166,3 +166,6 @@ class Migration(migrations.Migration):
             ],
             options={
                 "ordering": ("-created",),
+            },
+        ),
+    ]
